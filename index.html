@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <base href="./">
     <title>Her Hafta Yeni Bir Şehit Analım - Gerçek Hafta Sistemi</title>
     <link rel="stylesheet" href="assets/fontawesome.min.css">
     <script src="assets/chart.umd.min.js"></script>
@@ -579,7 +580,7 @@
 
         .hero-banner {
             background: linear-gradient(rgba(218, 41, 28, 0.85), rgba(179, 32, 21, 0.9)),
-                url('foto.jpg') center/cover;
+                url('./foto.jpg') center/cover;
             color: var(--white);
             text-align: center;
             padding: 60px 20px;
@@ -1794,7 +1795,7 @@
 
             <div class="card martyr-of-week">
                 <div class="current-week-badge" id="week-badge">Bu Hafta (1. Hafta)</div>
-                <img src="foto.jpg" alt="Haftanın Şehidi" id="home-martyr-img" class="martyr-img">
+                <img src="./foto.jpg" alt="Haftanın Şehidi" id="home-martyr-img" class="martyr-img">
                 <div class="martyr-info">
                     <h2 style="color: var(--primary-red); margin-bottom: 10px;">🇹🇷 Bu Haftanın Şehidi 🇹🇷</h2>
                     <h3 id="home-martyr-name" style="margin-bottom: 10px;">Şehit Adı Yükleniyor...</h3>
@@ -2416,8 +2417,7 @@
         function showActiveNotification() {
             if(Notification.permission === "granted") {
                 new Notification("Her Hafta Yeni Şehit Analım", {
-                    body: "Artık her hafta yeni şehitleri öğrenmeniz için bildirim alacaksınız.",
-                    icon: "foto.png"
+                    body: "Artık her hafta yeni şehitleri öğrenmeniz için bildirim alacaksınız."
                 });
             }
         }
@@ -2434,8 +2434,7 @@
             
             if(lastSent != currentActiveWeek) {
                 new Notification("Her Hafta Yeni Şehit Analım", {
-                    body: `Artık her hafta yeni şehitleri öğrenmeniz için bildirim alacaksınız. Bugün: ${martyr.name}`,
-                    icon: "foto.png"
+                    body: `Artık her hafta yeni şehitleri öğrenmeniz için bildirim alacaksınız. Bugün: ${martyr.name}`
                 });
                 localStorage.setItem(`weeklyNotif_${userKey}_week`, currentActiveWeek);
             }
@@ -2508,10 +2507,10 @@
 
         // ============== 52 HAFTALIK VERİTABANI ==============
         const martyrsData = [
-            { week: 1, name: "Astsubay Kıdemli Başçavuş Ömer Halisdemir", imgUrl: "foto.jpg", desc: "15 Temmuz 2016 darbe girişiminde Özel Kuvvetler Komutanlığı'nı ele geçirmeye çalışan darbeci general Semih Terzi'yi vurarak şehadete yürüyen kahraman.", location: "Ankara - Özel Kuvvetler Komutanlığı", hometown: "Niğde - Bor", story: "🗡️ ÖMER HALİSDEMİR'İN KAHRAMANLIK HİKAYESİ 🗡️\n\nÖmer Halisdemir, 15 Temmuz 2016 gecesi, Türkiye'nin en kritik noktalarından biri olan Özel Kuvvetler Komutanlığı'nda nöbetçi astsubay olarak görev yapıyordu. Darbe girişimi sırasında, Özel Kuvvetler Komutanlığı'nı ele geçirmeye çalışan darbeci Tuğgeneral Semih Terzi'yi vurarak darbe girişiminin seyrini değiştirdi. Bu kahramanca hareketiyle birçok masum insanın hayatını kurtardı ancak kendisi şehit düştü. Ömer Halisdemir'in bu fedakarlığı, 15 Temmuz direnişinin sembollerinden biri haline geldi." },
-            { week: 2, name: "Polis Memuru Fethi Sekin", imgUrl: "foto.jpg", desc: "İzmir Adliyesi'ne yönelik düzenlenen terör saldırısını canı pahasına kahramanca önleyen polis memuru.", location: "İzmir - İzmir Adliyesi", hometown: "Elazığ - Baskil", story: "🔫 FETHİ SEKİN'İN DESTANSI MÜCADELESİ 🔫\n\n5 Ocak 2017 sabahı, İzmir Adliyesi'ne yönelik büyük bir terör saldırısı planlanmıştı. PKK'lı teröristler, araçla adliyeye yaklaşırken Polis Memuru Fethi Sekin durumu fark etti. Tek başına teröristlerin üzerine yürüyerek çatışmaya girdi. İki teröristi etkisiz hale getirdi ancak bu sırada ağır yaralandı ve şehit düştü. Onun kahramanlığı sayesinde adliyede büyük bir katliam önlendi." },
-            { week: 3, name: "Eren Bülbül", imgUrl: "foto.jpg", desc: "Trabzon'un Maçka ilçesinde teröristlerin yerini güvenlik güçlerine gösterirken 15 yaşında şehit düşen vatan evladı.", location: "Trabzon - Maçka", hometown: "Trabzon - Maçka", story: "🍃 EREN BÜLBÜL - 15 YAŞINDA BİR KAHRAMAN 🍃\n\nEren Bülbül, 11 Ağustos 2017'de Trabzon'un Maçka ilçesinde, güvenlik güçlerine teröristlerin yerini gösterirken PKK'lı teröristler tarafından açılan ateş sonucu şehit oldu. Henüz 15 yaşında olan Eren, vatan sevgisiyle dolu bir gençti. Onun 'İyi ki varsın Eren' sözüyle özdeşleşen hikayesi, tüm Türkiye'yi yasa boğdu ve milyonlarca insanın kalbinde özel bir yer edindi." },
-            { week: 4, name: "Öğretmen Şenay Aybüke Yalçın", imgUrl: "foto.jpg", desc: "Batman'ın Kozluk ilçesinde terör örgütü PKK'nın saldırısında gencecik yaşında şehit olan müzik öğretmeni.", location: "Batman - Kozluk", hometown: "Çorum - Osmancık", story: "🎵 ŞENAY AYBÜKE YALÇIN - MÜZİĞİN VE UMUDUN SESİ 🎵\n\nŞenay Aybüke Yalçın, 22 yaşında Batman'ın Kozluk ilçesinde müzik öğretmeni olarak görev yapıyordu. 9 Haziran 2017'de, öğrencilerine karnelerini dağıttıktan sonra evine dönerken PKK'lı teröristlerin hain saldırısına uğradı ve şehit oldu. Aybüke öğretmen, kısa süren hayatında yüzlerce öğrencinin kalbine dokundu ve onlara müziğin gücünü öğretti. Onun adı bugün birçok okulda ve kütüphanede yaşatılıyor." }
+            { week: 1, name: "Astsubay Kıdemli Başçavuş Ömer Halisdemir", imgUrl: "./foto.jpg", desc: "15 Temmuz 2016 darbe girişiminde Özel Kuvvetler Komutanlığı'nı ele geçirmeye çalışan darbeci general Semih Terzi'yi vurarak şehadete yürüyen kahraman.", location: "Ankara - Özel Kuvvetler Komutanlığı", hometown: "Niğde - Bor", story: "🗡️ ÖMER HALİSDEMİR'İN KAHRAMANLIK HİKAYESİ 🗡️\n\nÖmer Halisdemir, 15 Temmuz 2016 gecesi, Türkiye'nin en kritik noktalarından biri olan Özel Kuvvetler Komutanlığı'nda nöbetçi astsubay olarak görev yapıyordu. Darbe girişimi sırasında, Özel Kuvvetler Komutanlığı'nı ele geçirmeye çalışan darbeci Tuğgeneral Semih Terzi'yi vurarak darbe girişiminin seyrini değiştirdi. Bu kahramanca hareketiyle birçok masum insanın hayatını kurtardı ancak kendisi şehit düştü. Ömer Halisdemir'in bu fedakarlığı, 15 Temmuz direnişinin sembollerinden biri haline geldi." },
+            { week: 2, name: "Polis Memuru Fethi Sekin", imgUrl: "./foto.jpg", desc: "İzmir Adliyesi'ne yönelik düzenlenen terör saldırısını canı pahasına kahramanca önleyen polis memuru.", location: "İzmir - İzmir Adliyesi", hometown: "Elazığ - Baskil", story: "🔫 FETHİ SEKİN'İN DESTANSI MÜCADELESİ 🔫\n\n5 Ocak 2017 sabahı, İzmir Adliyesi'ne yönelik büyük bir terör saldırısı planlanmıştı. PKK'lı teröristler, araçla adliyeye yaklaşırken Polis Memuru Fethi Sekin durumu fark etti. Tek başına teröristlerin üzerine yürüyerek çatışmaya girdi. İki teröristi etkisiz hale getirdi ancak bu sırada ağır yaralandı ve şehit düştü. Onun kahramanlığı sayesinde adliyede büyük bir katliam önlendi." },
+            { week: 3, name: "Eren Bülbül", imgUrl: "./foto.jpg", desc: "Trabzon'un Maçka ilçesinde teröristlerin yerini güvenlik güçlerine gösterirken 15 yaşında şehit düşen vatan evladı.", location: "Trabzon - Maçka", hometown: "Trabzon - Maçka", story: "🍃 EREN BÜLBÜL - 15 YAŞINDA BİR KAHRAMAN 🍃\n\nEren Bülbül, 11 Ağustos 2017'de Trabzon'un Maçka ilçesinde, güvenlik güçlerine teröristlerin yerini gösterirken PKK'lı teröristler tarafından açılan ateş sonucu şehit oldu. Henüz 15 yaşında olan Eren, vatan sevgisiyle dolu bir gençti. Onun 'İyi ki varsın Eren' sözüyle özdeşleşen hikayesi, tüm Türkiye'yi yasa boğdu ve milyonlarca insanın kalbinde özel bir yer edindi." },
+            { week: 4, name: "Öğretmen Şenay Aybüke Yalçın", imgUrl: "./foto.jpg", desc: "Batman'ın Kozluk ilçesinde terör örgütü PKK'nın saldırısında gencecik yaşında şehit olan müzik öğretmeni.", location: "Batman - Kozluk", hometown: "Çorum - Osmancık", story: "🎵 ŞENAY AYBÜKE YALÇIN - MÜZİĞİN VE UMUDUN SESİ 🎵\n\nŞenay Aybüke Yalçın, 22 yaşında Batman'ın Kozluk ilçesinde müzik öğretmeni olarak görev yapıyordu. 9 Haziran 2017'de, öğrencilerine karnelerini dağıttıktan sonra evine dönerken PKK'lı teröristlerin hain saldırısına uğradı ve şehit oldu. Aybüke öğretmen, kısa süren hayatında yüzlerce öğrencinin kalbine dokundu ve onlara müziğin gücünü öğretti. Onun adı bugün birçok okulda ve kütüphanede yaşatılıyor." }
         ];
 
         for (let i = 5; i <= 52; i++) {
