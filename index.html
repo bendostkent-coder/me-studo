@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <base href="./">
     <title>Her Hafta Yeni Bir Şehit Analım - Gerçek Hafta Sistemi</title>
-    <link rel="stylesheet" href="assets/fontawesome.min.css">
-    <script src="assets/chart.umd.min.js"></script>
-    <script src="assets/supabase.min.js"></script>
+    <link rel="stylesheet" href="./assets/fontawesome.min.css">
+    <script src="./assets/chart.umd.min.js"></script>
+    <script src="./assets/supabase.min.js"></script>
     <style>
         :root {
             --primary-red: #da291c;
@@ -31,6 +31,15 @@
             padding: 0;
             box-sizing: border-box;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .fa-solid, .fas, .fa-regular, .far, .fa-brands, .fab, .fa {
+            font-family: 'Font Awesome 6 Free', 'Font Awesome 5 Free', 'Segoe UI Symbol', 'Apple Color Emoji', 'Noto Color Emoji', sans-serif;
+            font-style: normal;
+            font-variant: normal;
+            text-rendering: auto;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
         }
 
         body {
@@ -580,7 +589,7 @@
 
         .hero-banner {
             background: linear-gradient(rgba(218, 41, 28, 0.85), rgba(179, 32, 21, 0.9)),
-                url('./foto.jpg') center/cover;
+                url('./foto.png') center/cover;
             color: var(--white);
             text-align: center;
             padding: 60px 20px;
@@ -1795,7 +1804,7 @@
 
             <div class="card martyr-of-week">
                 <div class="current-week-badge" id="week-badge">Bu Hafta (1. Hafta)</div>
-                <img src="./foto.jpg" alt="Haftanın Şehidi" id="home-martyr-img" class="martyr-img">
+                <img src="./foto.png" alt="Haftanın Şehidi" id="home-martyr-img" class="martyr-img">
                 <div class="martyr-info">
                     <h2 style="color: var(--primary-red); margin-bottom: 10px;">🇹🇷 Bu Haftanın Şehidi 🇹🇷</h2>
                     <h3 id="home-martyr-name" style="margin-bottom: 10px;">Şehit Adı Yükleniyor...</h3>
@@ -2507,10 +2516,10 @@
 
         // ============== 52 HAFTALIK VERİTABANI ==============
         const martyrsData = [
-            { week: 1, name: "Astsubay Kıdemli Başçavuş Ömer Halisdemir", imgUrl: "./foto.jpg", desc: "15 Temmuz 2016 darbe girişiminde Özel Kuvvetler Komutanlığı'nı ele geçirmeye çalışan darbeci general Semih Terzi'yi vurarak şehadete yürüyen kahraman.", location: "Ankara - Özel Kuvvetler Komutanlığı", hometown: "Niğde - Bor", story: "🗡️ ÖMER HALİSDEMİR'İN KAHRAMANLIK HİKAYESİ 🗡️\n\nÖmer Halisdemir, 15 Temmuz 2016 gecesi, Türkiye'nin en kritik noktalarından biri olan Özel Kuvvetler Komutanlığı'nda nöbetçi astsubay olarak görev yapıyordu. Darbe girişimi sırasında, Özel Kuvvetler Komutanlığı'nı ele geçirmeye çalışan darbeci Tuğgeneral Semih Terzi'yi vurarak darbe girişiminin seyrini değiştirdi. Bu kahramanca hareketiyle birçok masum insanın hayatını kurtardı ancak kendisi şehit düştü. Ömer Halisdemir'in bu fedakarlığı, 15 Temmuz direnişinin sembollerinden biri haline geldi." },
-            { week: 2, name: "Polis Memuru Fethi Sekin", imgUrl: "./foto.jpg", desc: "İzmir Adliyesi'ne yönelik düzenlenen terör saldırısını canı pahasına kahramanca önleyen polis memuru.", location: "İzmir - İzmir Adliyesi", hometown: "Elazığ - Baskil", story: "🔫 FETHİ SEKİN'İN DESTANSI MÜCADELESİ 🔫\n\n5 Ocak 2017 sabahı, İzmir Adliyesi'ne yönelik büyük bir terör saldırısı planlanmıştı. PKK'lı teröristler, araçla adliyeye yaklaşırken Polis Memuru Fethi Sekin durumu fark etti. Tek başına teröristlerin üzerine yürüyerek çatışmaya girdi. İki teröristi etkisiz hale getirdi ancak bu sırada ağır yaralandı ve şehit düştü. Onun kahramanlığı sayesinde adliyede büyük bir katliam önlendi." },
-            { week: 3, name: "Eren Bülbül", imgUrl: "./foto.jpg", desc: "Trabzon'un Maçka ilçesinde teröristlerin yerini güvenlik güçlerine gösterirken 15 yaşında şehit düşen vatan evladı.", location: "Trabzon - Maçka", hometown: "Trabzon - Maçka", story: "🍃 EREN BÜLBÜL - 15 YAŞINDA BİR KAHRAMAN 🍃\n\nEren Bülbül, 11 Ağustos 2017'de Trabzon'un Maçka ilçesinde, güvenlik güçlerine teröristlerin yerini gösterirken PKK'lı teröristler tarafından açılan ateş sonucu şehit oldu. Henüz 15 yaşında olan Eren, vatan sevgisiyle dolu bir gençti. Onun 'İyi ki varsın Eren' sözüyle özdeşleşen hikayesi, tüm Türkiye'yi yasa boğdu ve milyonlarca insanın kalbinde özel bir yer edindi." },
-            { week: 4, name: "Öğretmen Şenay Aybüke Yalçın", imgUrl: "./foto.jpg", desc: "Batman'ın Kozluk ilçesinde terör örgütü PKK'nın saldırısında gencecik yaşında şehit olan müzik öğretmeni.", location: "Batman - Kozluk", hometown: "Çorum - Osmancık", story: "🎵 ŞENAY AYBÜKE YALÇIN - MÜZİĞİN VE UMUDUN SESİ 🎵\n\nŞenay Aybüke Yalçın, 22 yaşında Batman'ın Kozluk ilçesinde müzik öğretmeni olarak görev yapıyordu. 9 Haziran 2017'de, öğrencilerine karnelerini dağıttıktan sonra evine dönerken PKK'lı teröristlerin hain saldırısına uğradı ve şehit oldu. Aybüke öğretmen, kısa süren hayatında yüzlerce öğrencinin kalbine dokundu ve onlara müziğin gücünü öğretti. Onun adı bugün birçok okulda ve kütüphanede yaşatılıyor." }
+            { week: 1, name: "Astsubay Kıdemli Başçavuş Ömer Halisdemir", imgUrl: "./foto.png", desc: "15 Temmuz 2016 darbe girişiminde Özel Kuvvetler Komutanlığı'nı ele geçirmeye çalışan darbeci general Semih Terzi'yi vurarak şehadete yürüyen kahraman.", location: "Ankara - Özel Kuvvetler Komutanlığı", hometown: "Niğde - Bor", story: "🗡️ ÖMER HALİSDEMİR'İN KAHRAMANLIK HİKAYESİ 🗡️\n\nÖmer Halisdemir, 15 Temmuz 2016 gecesi, Türkiye'nin en kritik noktalarından biri olan Özel Kuvvetler Komutanlığı'nda nöbetçi astsubay olarak görev yapıyordu. Darbe girişimi sırasında, Özel Kuvvetler Komutanlığı'nı ele geçirmeye çalışan darbeci Tuğgeneral Semih Terzi'yi vurarak darbe girişiminin seyrini değiştirdi. Bu kahramanca hareketiyle birçok masum insanın hayatını kurtardı ancak kendisi şehit düştü. Ömer Halisdemir'in bu fedakarlığı, 15 Temmuz direnişinin sembollerinden biri haline geldi." },
+            { week: 2, name: "Polis Memuru Fethi Sekin", imgUrl: "./foto.png", desc: "İzmir Adliyesi'ne yönelik düzenlenen terör saldırısını canı pahasına kahramanca önleyen polis memuru.", location: "İzmir - İzmir Adliyesi", hometown: "Elazığ - Baskil", story: "🔫 FETHİ SEKİN'İN DESTANSI MÜCADELESİ 🔫\n\n5 Ocak 2017 sabahı, İzmir Adliyesi'ne yönelik büyük bir terör saldırısı planlanmıştı. PKK'lı teröristler, araçla adliyeye yaklaşırken Polis Memuru Fethi Sekin durumu fark etti. Tek başına teröristlerin üzerine yürüyerek çatışmaya girdi. İki teröristi etkisiz hale getirdi ancak bu sırada ağır yaralandı ve şehit düştü. Onun kahramanlığı sayesinde adliyede büyük bir katliam önlendi." },
+            { week: 3, name: "Eren Bülbül", imgUrl: "./foto.png", desc: "Trabzon'un Maçka ilçesinde teröristlerin yerini güvenlik güçlerine gösterirken 15 yaşında şehit düşen vatan evladı.", location: "Trabzon - Maçka", hometown: "Trabzon - Maçka", story: "🍃 EREN BÜLBÜL - 15 YAŞINDA BİR KAHRAMAN 🍃\n\nEren Bülbül, 11 Ağustos 2017'de Trabzon'un Maçka ilçesinde, güvenlik güçlerine teröristlerin yerini gösterirken PKK'lı teröristler tarafından açılan ateş sonucu şehit oldu. Henüz 15 yaşında olan Eren, vatan sevgisiyle dolu bir gençti. Onun 'İyi ki varsın Eren' sözüyle özdeşleşen hikayesi, tüm Türkiye'yi yasa boğdu ve milyonlarca insanın kalbinde özel bir yer edindi." },
+            { week: 4, name: "Öğretmen Şenay Aybüke Yalçın", imgUrl: "./foto.png", desc: "Batman'ın Kozluk ilçesinde terör örgütü PKK'nın saldırısında gencecik yaşında şehit olan müzik öğretmeni.", location: "Batman - Kozluk", hometown: "Çorum - Osmancık", story: "🎵 ŞENAY AYBÜKE YALÇIN - MÜZİĞİN VE UMUDUN SESİ 🎵\n\nŞenay Aybüke Yalçın, 22 yaşında Batman'ın Kozluk ilçesinde müzik öğretmeni olarak görev yapıyordu. 9 Haziran 2017'de, öğrencilerine karnelerini dağıttıktan sonra evine dönerken PKK'lı teröristlerin hain saldırısına uğradı ve şehit oldu. Aybüke öğretmen, kısa süren hayatında yüzlerce öğrencinin kalbine dokundu ve onlara müziğin gücünü öğretti. Onun adı bugün birçok okulda ve kütüphanede yaşatılıyor." }
         ];
 
         for (let i = 5; i <= 52; i++) {
@@ -2537,7 +2546,7 @@
             martyrsData.push({
                 week: i,
                 name: name,
-                imgUrl: "foto.jpg",
+                imgUrl: "foto.png",
                 desc: `Vatan uğruna canını feda eden kahraman şehidimiz. ${i}. hafta kahramanımızı saygıyla anıyoruz.`,
                 location: "Vatanın Dört Bir Yanı",
                 hometown: "Türkiye'mizin Farklı Köşeleri",
@@ -2613,8 +2622,8 @@
         ];
 
         // ============= ADMIN HESABI BİLGİLERİ =============
-        const ADMIN_EMAIL = "admin@gmail.com";
-        const ADMIN_PASSWORD = "admin2013";
+        const DEFAULT_ADMIN_EMAIL = "admin@me-studo.com";
+        const DEFAULT_ADMIN_PASSWORD = "admin1234";
 
         // ============= SİSTEM DEĞİŞKENLERİ =============
         let learnedMartyrs = [];
@@ -2655,6 +2664,25 @@
         }
 
         // ============= ANA SİTE FONKSİYONLARI =============
+        function ensureDefaultAdminAccount() {
+            const users = JSON.parse(localStorage.getItem('appUsers') || '[]');
+            if (!users.some(u => (u.email || '').toLowerCase() === DEFAULT_ADMIN_EMAIL)) {
+                users.push({
+                    email: DEFAULT_ADMIN_EMAIL,
+                    fullname: 'Yönetici',
+                    password: DEFAULT_ADMIN_PASSWORD,
+                    learned: [],
+                    achievements: [],
+                    reminder: true,
+                    isAdmin: true,
+                    competition_points: 0,
+                    exam1_score: 0,
+                    exam2_score: 0
+                });
+                localStorage.setItem('appUsers', JSON.stringify(users));
+            }
+        }
+
         function initMainSite() {
             setTimeout(() => {
                 const splash = document.getElementById('splash-screen');
@@ -2679,7 +2707,7 @@
                 try {
                     currentUser = JSON.parse(storedUser);
                     learnedMartyrs = currentUser.learned || [];
-                    isAdmin = currentUser.isAdmin || (currentUser.email === ADMIN_EMAIL);
+                    isAdmin = Boolean(currentUser.isAdmin);
                     competitionPoints = currentUser.competition_points || 0;
                     exam1Score = currentUser.exam1_score || 0;
                     exam2Score = currentUser.exam2_score || 0;
@@ -2937,10 +2965,6 @@
                 alert('Lütfen tüm alanları doldurun.');
                 return;
             }
-            if (email === ADMIN_EMAIL) {
-                alert('Bu e-posta adresi admin hesabına aittir. Farklı bir e-posta kullanın.');
-                return;
-            }
             let users = JSON.parse(localStorage.getItem('appUsers') || '[]');
             if (users.find(u => u.email.toLowerCase() === email)) {
                 alert('Bu e-posta adresi zaten kayıtlı. Giriş yapmayı deneyin.');
@@ -2983,6 +3007,39 @@
                 alert('E-posta ve şifrenizi giriniz.');
                 return;
             }
+            if (email === DEFAULT_ADMIN_EMAIL && password === DEFAULT_ADMIN_PASSWORD) {
+                const adminUser = {
+                    email: DEFAULT_ADMIN_EMAIL,
+                    fullname: 'Yönetici',
+                    learned: [],
+                    achievements: [],
+                    reminder: true,
+                    isAdmin: true,
+                    competition_points: 0,
+                    exam1_score: 0,
+                    exam2_score: 0
+                };
+                currentUser = adminUser;
+                learnedMartyrs = currentUser.learned;
+                isAdmin = true;
+                competitionPoints = 0;
+                exam1Score = 0;
+                exam2Score = 0;
+                saveUserToStorage();
+                document.getElementById('top-header').style.display = 'flex';
+                document.getElementById('bottom-nav').style.display = 'block';
+                document.getElementById('user-name-display').innerText = currentUser.fullname || currentUser.email;
+                document.getElementById('profile-name').innerText = currentUser.fullname || currentUser.email;
+                document.getElementById('admin-panel-btn').style.display = 'inline-block';
+                currentActiveWeek = getCurrentWeek();
+                loadReminderSetting();
+                renderCalendar();
+                updateProfileStats();
+                renderArchive();
+                switchView('view-home', document.querySelector('.nav-list .nav-item:first-child'));
+                return;
+            }
+
             let user = null;
             if (supabaseConnected) {
                 const { data, error } = await supabaseClient.auth.signInWithPassword({ email, password });
@@ -3580,6 +3637,12 @@
             localStorage.removeItem('currentUser');
             localStorage.removeItem('siteAnalytics');
             localStorage.removeItem('visitorId');
+            localStorage.removeItem('bannerClosed');
+            Object.keys(localStorage).forEach(key => {
+                if (key.startsWith('weeklyNotif_') || key.startsWith('reminder_')) {
+                    localStorage.removeItem(key);
+                }
+            });
         }
 
         function initAnalytics() {
@@ -3677,7 +3740,7 @@
                 const percent = ((learnedCount / 52) * 100).toFixed(1);
                 const row = document.createElement('tr');
                 row.innerHTML = `
-                    <td><strong>${user.fullname || 'İsimsiz'} ${user.email === ADMIN_EMAIL ? '<span class="badge">Admin</span>' : ''}</strong></td>
+                    <td><strong>${user.fullname || 'İsimsiz'}</strong></td>
                     <td>${user.email}</td>
                     <td>${learnedCount} / 52</td>
                     <td>${achievements.length > 0 ? achievements.slice(0,2).join(', ') : '<span style="color:#999;">Henüz yok</span>'}</td>
@@ -3710,6 +3773,7 @@
             document.getElementById('main-site-content').style.display = 'none';
             document.getElementById('competition-container').style.display = 'none';
             clearAllStoredAccounts();
+            ensureDefaultAdminAccount();
             await initSupabase();
         };
     </script>
